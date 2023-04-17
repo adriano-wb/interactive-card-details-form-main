@@ -49,7 +49,7 @@ window.onload = function() {
         campoNome.classList.add("focus-error");
         campoNome.classList.remove("focus-ok");
         erroNome.style.display = "block";
-        erroNome.innerHTML = "Digite o nome impresso no cartão, número não é permitido!";
+        erroNome.innerHTML = "<i class='fa fa-exclamation-circle'></i> Digite o nome impresso no cartão, número não é permitido!";
       }
 
       /* Não pode conter acentos e caracteres especiais */
@@ -58,7 +58,7 @@ window.onload = function() {
         campoNome.classList.add("focus-error");
         campoNome.classList.remove("focus-ok");
         erroNome.style.display = "block";
-        erroNome.innerHTML = "Por favor, não coloque sinais em seu nome!";
+        erroNome.innerHTML = "<i class='fa fa-exclamation-circle'></i> Por favor, não coloque sinais em seu nome!";
       }
     }
 
@@ -89,7 +89,7 @@ window.onload = function() {
         campoNumero.classList.add("focus-error");
         campoNumero.classList.remove("focus-ok");
         erroNumero.style.display = "block";
-        erroNumero.innerHTML = "Digite um número válido!";
+        erroNumero.innerHTML = "<i class='fa fa-exclamation-circle'></i> Digite um número válido!";
       }
     }
 
@@ -119,7 +119,7 @@ window.onload = function() {
         mesValidade.classList.add("focus-error");
         mesValidade.classList.remove("focus-ok");
         erroDates.style.display = "block";
-        erroDates.innerHTML = "Digite um número válido!";
+        erroDates.innerHTML = "<i class='fa fa-exclamation-circle'></i> Digite um número válido!";
       }
     }
 
@@ -195,32 +195,34 @@ window.onload = function() {
         codigoCvc.classList.add("focus-error");
         codigoCvc.classList.remove("focus-ok");
         cvcMsgErr.style.display = "block";
-        cvcMsgErr.innerHTML = "Digite um número válido!";
+        cvcMsgErr.innerHTML = "<i class='fa fa-exclamation-circle'></i> Digite um número válido!";
       }
     }
   }
 
   /* Validação de formulário para liberação da conclusão */
-  function botaoAcaoValidarFormulario() {
+  function botaoAcaoValidarFormulario(e) {
     if (!campoNome.value) {
       erroNome.style.display = "block";
-      erroNome.innerHTML = "Preencha o campo requerido!";
+      erroNome.innerHTML = "<i class='fa fa-exclamation-circle'></i> Preencha o campo requerido!";
       campoNome.classList.remove("focus-ok");
       campoNome.classList.add("focus-error");
       campoNome.classList.add("borda-error");
+      e.preventDefault();
     }
 
     if (!campoNumero.value) {
       erroNumero.style.display = "block";
-      erroNumero.innerHTML = "Preencha o campo requerido!";
+      erroNumero.innerHTML = "<i class='fa fa-exclamation-circle'></i> Preencha o campo requerido!";
       campoNumero.classList.remove("focus-ok");
       campoNumero.classList.add("focus-error");
       campoNumero.classList.add("borda-error");
+      e.preventDefault();
     }
 
     if (!mesValidade.value && !anoValidade.value) {
       erroDates.style.display = "block";
-      erroDates.innerHTML = "Preencha os campos!";
+      erroDates.innerHTML = "<i class='fa fa-exclamation-circle'></i> Preencha os campos!";
 
       mesValidade.classList.remove("focus-ok");
       mesValidade.classList.add("focus-error");
@@ -244,7 +246,7 @@ window.onload = function() {
     }
 
     if (!mesValidade.value && anoValidade.value) {
-      erroDates.innerHTML = "Preencha o campo do mês!";
+      erroDates.innerHTML = "<i class='fa fa-exclamation-circle'></i> Preencha o campo do mês!";
       mesValidade.classList.remove("focus-ok");
       mesValidade.classList.add("focus-error");
       mesValidade.classList.add("borda-error");
@@ -256,7 +258,7 @@ window.onload = function() {
 
     if (!anoValidade.value && mesValidade.value) {
       erroDates.style.display = "block";
-      erroDates.innerHTML = "Preencha o campo do ano!";
+      erroDates.innerHTML = "<i class='fa fa-exclamation-circle'></i> Preencha o campo do ano!";
       anoValidade.classList.remove("focus-ok");
       anoValidade.classList.add("focus-error");
       anoValidade.classList.add("borda-error");
@@ -268,7 +270,7 @@ window.onload = function() {
 
     if (anoValidade.value && /[^0-9]/g.test(anoValidade.value)) {
       erroDates.style.display = "block";
-      erroDates.innerHTML = "Preencha o campo corretamente!";
+      erroDates.innerHTML = "<i class='fa fa-exclamation-circle'></i> Preencha o campo corretamente!";
       anoValidade.classList.remove("focus-ok");
       anoValidade.classList.add("focus-error");
       anoValidade.classList.add("borda-error");
@@ -286,7 +288,7 @@ window.onload = function() {
 
     if (/[^0-9]/g.test(mesValidade.value) || Number(mesValidade.value) > 12) {
       erroDates.style.display = "block";
-      erroDates.innerHTML = "Preencha o campo corretamente!";
+      erroDates.innerHTML = "<i class='fa fa-exclamation-circle'></i> Preencha o campo corretamente!";
       mesValidade.classList.remove("focus-ok");
       mesValidade.classList.add("focus-error");
       mesValidade.classList.add("borda-error");
@@ -304,7 +306,7 @@ window.onload = function() {
 
     if (/[^0-9]/g.test(anoValidade.value) && /[^0-9]/g.test(mesValidade.value)) {
       erroDates.style.display = "block";
-      erroDates.innerHTML = "Preencha os campos corretamente!";
+      erroDates.innerHTML = "<i class='fa fa-exclamation-circle'></i> Preencha os campos corretamente!";
       mesValidade.classList.remove("focus-ok");
       mesValidade.classList.add("focus-error");
       mesValidade.classList.add("borda-error");
@@ -317,7 +319,7 @@ window.onload = function() {
     /* Validação código CVC */
     if (/[^0-9]/g.test(codigoCvc.value) || !codigoCvc.value) {
       cvcMsgErr.style.display = "block";
-      cvcMsgErr.innerHTML = "Preencha o campo corretamente!";
+      cvcMsgErr.innerHTML = "<i class='fa fa-exclamation-circle'></i> Preencha o campo corretamente!";
       codigoCvc.classList.remove("focus-ok");
       codigoCvc.classList.add("focus-error");
       codigoCvc.classList.add("borda-error");
@@ -329,7 +331,7 @@ window.onload = function() {
     }
 
     if (!codigoCvc.value) {
-      cvcMsgErr.innerHTML = "Preencha o campo requerido!";
+      cvcMsgErr.innerHTML = "<i class='fa fa-exclamation-circle'></i> Preencha o campo requerido!";
     }
 
     if (codigoCvc.value.length < 3) {
@@ -337,7 +339,7 @@ window.onload = function() {
       codigoCvc.classList.add("focus-error");
       codigoCvc.classList.remove("focus-ok");
       cvcMsgErr.style.display = "block";
-      cvcMsgErr.innerHTML = "Preecha o campo requerido!";
+      cvcMsgErr.innerHTML = "<i class='fa fa-exclamation-circle'></i> Preecha o campo requerido!";
     }
 
     /* Se todos passarem no teste, avança para o agradecimento */

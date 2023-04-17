@@ -30,11 +30,6 @@ main {
   --very-dark-violet: hsl(278, 68%, 11%);
 }
 
-.title-principal {
-  position: absolute;
-  top: -1000px;
-}
-
 /* Modelo do cartão de crédito frente e verso */
 .model-card {
   background: url("../images/bg-main-mobile.png") 0 0 / 100% 100% no-repeat;
@@ -159,7 +154,7 @@ main {
   color: var(--red);
   display: none;
   font-size: 0.80rem;
-  margin-top: 1px;
+  margin-top: 5px;
 }
 
 label[class$="label"] {
@@ -286,5 +281,5 @@ input[class*="field"]::placeholder {
   width: 100%;
 }
 .attribution a {
-  color: var(--dark-grayish-violet);
+  color: hsl(228, 45%, 44%);
 }
