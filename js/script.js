@@ -344,7 +344,7 @@ window.onload = function() {
 
     /* Se todos passarem no teste, avança para o agradecimento */
     if (campoNome.value &&
-        /[a-zA-Z0-9\s]/g.test(campoNome.value) &&
+        /[^a-zA-Z0-9\s]/g.test(campoNome.value) &&
         campoNumero.value &&
         validNumeroCartao.test(campoNumero.value) &&
         mesValidade.value &&
