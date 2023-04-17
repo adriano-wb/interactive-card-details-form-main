@@ -31,7 +31,6 @@ main {
 }
 
 .title-principal {
-  visibility: hidden;
   position: absolute;
   top: -1000px;
 }
