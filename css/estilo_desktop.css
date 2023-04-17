@@ -1,0 +1,130 @@
+body {
+  /* background: url("../design/active-states.jpg") 0 0 / 100% auto no-repeat; */
+}
+
+.container {
+  display: flex;
+}
+
+/* Modelo do cartão de crédito frente e verso */
+.model-card {
+  background: url("../images/bg-main-desktop.png") 0 0 / 100% 100% no-repeat;
+  height: 100vh;
+  flex-basis: 36.4%;
+  justify-content: center;
+}
+
+.front-model-card, .back-model-card {
+  height: 246px;
+  width: 447px;
+}
+
+/* Frente do cartão */
+.front-model-card {
+  box-shadow: 17px 28px 22px #6663;
+  right: -127px;
+  /* top: 187px; */
+  top: 21%;
+  padding: 26px 32px;
+  align-self: flex-end;
+}
+
+.front-model-card__icon {
+  width: 85px;
+  height: 47px;
+}
+
+.front-model-card__number {
+  font-size: 1.7rem;
+}
+
+.card-name-date {
+  margin-top: 24px;
+}
+
+.card-name-date__name,
+.card-name-date__validate {
+  font-size: 1rem;
+  letter-spacing: 1px;
+}
+
+.card-name-date__name {
+  width: 290px;
+  overflow: hidden;
+}
+/* Fim frente do cartão */
+
+/* Verso do cartão */
+.back-model-card  {
+  box-shadow: 0 35px 31px #6663;
+  order: 1;
+  /* top: 470px; */
+  top: 50%;
+  right: -221px;
+}
+
+.back-model-card__cvc {
+  margin-right: 60px;
+  margin-top: 10px;
+  font-size: 0.83rem;
+}
+/* Fim verso do cartão */
+
+/* Estilo formulário para cadastro do cartão de crédito */
+.card-form {
+  flex-basis: 72%;
+  display: flex; /* display: none; */
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin-top: -40px;
+}
+
+.form-container {
+  width: 379px;
+  margin-left: 122px;
+  margin-top: 63px;
+}
+
+input[class*="field"] {
+  font-size: 1.2rem;
+  padding: 10px 15px;
+}
+
+.card-number, .ends-fields {
+  margin-top: 20px;
+}
+
+.card-form__button {
+  cursor: pointer;
+  margin-top: 40px;
+}
+
+.thank {
+  flex-basis: 72%;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin-top: -40px;
+}
+
+.thank-container {
+  width: 379px;
+  display: flex;
+  flex-direction: column;
+  margin-left: 122px;
+  margin-top: 63px;
+}
+
+.thank__icon {
+  order: -1;
+}
+
+/* Rodapé */
+.attribution {
+  position: absolute;
+  bottom: 2px;
+  width: 100%;
+  text-align: center;
+}
