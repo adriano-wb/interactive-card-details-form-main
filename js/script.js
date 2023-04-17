@@ -361,7 +361,7 @@ window.onload = function() {
           formSecao.addEventListener("animationend", () => {
             formSecao.style.display = "none";
             thanksSecao.style.display = "flex";
-       })
+        })
     }
   }
 
