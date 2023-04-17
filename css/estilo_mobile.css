@@ -286,5 +286,5 @@ input[class*="field"]::placeholder {
   width: 100%;
 }
 .attribution a {
-  color: hsl(228, 45%, 44%);
+  color: var(--dark-grayish-violet);
 }
