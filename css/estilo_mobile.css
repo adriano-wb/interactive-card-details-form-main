@@ -47,7 +47,7 @@ main {
   background-size: 100% 108%;
   background-repeat: no-repeat;
   position: absolute;
-  border-radius: 7px;
+  border-radius: 10px;
   color: var(--white);
   display: flex;
   height: 156px;
