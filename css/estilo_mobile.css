@@ -157,6 +157,10 @@ main {
   margin-top: 5px;
 }
 
+.icon-error {
+  margin-top: 3px;
+}
+
 label[class$="label"] {
   color: var(--very-dark-violet);
   text-transform: uppercase;
