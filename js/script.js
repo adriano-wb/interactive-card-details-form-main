@@ -201,14 +201,13 @@ window.onload = function() {
   }
 
   /* Validação de formulário para liberação da conclusão */
-  function botaoAcaoValidarFormulario(e) {
+  function botaoAcaoValidarFormulario() {
     if (!campoNome.value) {
       erroNome.style.display = "block";
       erroNome.innerHTML = "Preencha o campo requerido!";
       campoNome.classList.remove("focus-ok");
       campoNome.classList.add("focus-error");
       campoNome.classList.add("borda-error");
-      e.preventDefault();
     }
 
     if (!campoNumero.value) {
@@ -217,7 +216,6 @@ window.onload = function() {
       campoNumero.classList.remove("focus-ok");
       campoNumero.classList.add("focus-error");
       campoNumero.classList.add("borda-error");
-      e.preventDefault();
     }
 
     if (!mesValidade.value && !anoValidade.value) {
