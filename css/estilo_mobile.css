@@ -234,6 +234,15 @@ input[class*="field"]::placeholder {
   padding: 15px;
   width: 100%;
   border-radius: 6px;
+  transition: .2s;
+}
+
+.card-form__button:hover, .thank__button:hover {
+  background-color: var(--linear-gradient-stop-1);
+}
+
+.card-form__button:active, .thank__button:active {
+  background-color: var(--linear-gradient-stop-2);
 }
 /* Final formulário para cadastro do cartão de crédito */
 
