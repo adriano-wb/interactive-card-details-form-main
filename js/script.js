@@ -355,7 +355,8 @@ window.onload = function() {
         /[0-9]/g.test(anoValidade.value) &&
         mesValidade.value.length === 2 &&
         anoValidade.value.length === 2 &&
-        /[0-9]/g.test(codigoCvc.value)) {
+        /[0-9]/g.test(codigoCvc.value) &&
+        codigoCvc.value.length < 3) {
           formSecao.classList.add("animOpacity0");
           formSecao.addEventListener("animationend", () => {
             formSecao.style.display = "none";
