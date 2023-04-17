@@ -30,6 +30,12 @@ main {
   --very-dark-violet: hsl(278, 68%, 11%);
 }
 
+.title-principal {
+  visibility: hidden;
+  position: absolute;
+  top: -1000px;
+}
+
 /* Modelo do cartão de crédito frente e verso */
 .model-card {
   background: url("../images/bg-main-mobile.png") 0 0 / 100% 100% no-repeat;
