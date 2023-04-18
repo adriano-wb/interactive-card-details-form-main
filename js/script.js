@@ -366,7 +366,7 @@ window.onload = function() {
   }
 
   function imprimirNumeroCartaoCorretamente() {
-    numeroImpresso.innerHTML = campoNumero.value;
+    numeroImpresso.textContent = campoNumero.value;
   }
 
   botaoEnviarInfoCartao.addEventListener("click", botaoAcaoValidarFormulario);
