@@ -380,4 +380,3 @@ window.onload = function() {
   anoValidade.addEventListener("change", imprimirNumeroCartaoCorretamente);
   codigoCvc.addEventListener("input", codigoCvcValidation);
 }
-}
