@@ -149,6 +149,7 @@ main {
 
 .card-form, .thank {
   padding: 85px 24px;
+  margin-top: 25px;
 }
 
 .msg-erro {
