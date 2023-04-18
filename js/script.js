@@ -152,6 +152,7 @@ window.onload = function() {
       anoValidade.classList.add("focus-ok");
       validadeImpressaAno.textContent = "";
       validadeImpressaAno.textContent += anoValidade.value;
+      erroDates.style.display = "none";
       
       if (/[^0-9]/g.test(anoValidade.value)) {
         anoValidade.classList.add("borda-error");
