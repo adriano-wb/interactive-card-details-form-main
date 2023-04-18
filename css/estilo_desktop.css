@@ -72,10 +72,6 @@ body {
 
 /* Estilo formulário para cadastro do cartão de crédito */
 
-.card-form, .thank {
-  margin-top:0;
-}
-
 .card-form {
   flex-basis: 72%;
   display: flex; /* display: none; */
