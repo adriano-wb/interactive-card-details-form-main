@@ -152,7 +152,14 @@ window.onload = function() {
       anoValidade.classList.add("focus-ok");
       validadeImpressaAno.textContent = "";
       validadeImpressaAno.textContent += anoValidade.value;
-
+      
+      if (/[^0-9]/g.test(anoValidade.value)) {
+        anoValidade.classList.add("borda-error");
+        anoValidade.classList.add("focus-error");
+        anoValidade.classList.remove("focus-ok");
+        erroDates.style.display = "block";
+        erroDates.innerHTML = " Digite um número válido!";
+      }
       if (mesValidade.value) {
         erroDates.style.display = "none";
       }
