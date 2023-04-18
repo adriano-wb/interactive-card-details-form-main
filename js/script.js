@@ -365,10 +365,19 @@ window.onload = function() {
     }
   }
 
+  function imprimirNumeroCartaoCorretamente() {
+    numeroImpresso.innerHTML = campoNumero.value;
+  }
+
   botaoEnviarInfoCartao.addEventListener("click", botaoAcaoValidarFormulario);
   campoNome.addEventListener("input", validarCampoDeEntradaNome);
   campoNumero.addEventListener("input", validarCampoDeEntradaNumero);
   mesValidade.addEventListener("input", mesValidadeSet);
   anoValidade.addEventListener("input", anoValidadeSet);
+  campoNome.addEventListener("change", imprimirNumeroCartaoCorretamente);
+  campoNumero.addEventListener("change", imprimirNumeroCartaoCorretamente);
+  mesValidade.addEventListener("change", imprimirNumeroCartaoCorretamente);
+  anoValidade.addEventListener("change", imprimirNumeroCartaoCorretamente);
   codigoCvc.addEventListener("input", codigoCvcValidation);
+}
 }
