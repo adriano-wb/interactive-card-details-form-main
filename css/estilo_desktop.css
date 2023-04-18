@@ -80,6 +80,10 @@ body {
   margin-top: -40px;
 }
 
+.card-form, .thank {
+  margin-top:0;
+}
+
 .form-container {
   width: 379px;
   margin-left: 122px;
