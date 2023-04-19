@@ -374,7 +374,21 @@ window.onload = function() {
   }
 
   function imprimirNumeroCartaoCorretamente() {
-    numeroImpresso.textContent = campoNumero.value;
+    if (campoNumero.value) {
+      campoNumero.classList.remove("borda-error");
+      campoNumero.classList.remove("focus-error");
+      campoNumero.classList.add("focus-ok");
+      erroNumero.style.display = "none";
+      numeroImpresso.textContent = campoNumero.value;
+
+      if (!validNumeroCartao.test(campoNumero.value)) {
+        campoNumero.classList.add("borda-error");
+        campoNumero.classList.add("focus-error");
+        campoNumero.classList.remove("focus-ok");
+        erroNumero.style.display = "block";
+        erroNumero.innerHTML = " Digite um número válido!";
+      }
+    }
   }
 
   botaoEnviarInfoCartao.addEventListener("click", botaoAcaoValidarFormulario);
