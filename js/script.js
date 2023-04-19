@@ -381,6 +381,11 @@ window.onload = function() {
       campoNumero.classList.remove("focus-error");
       campoNumero.classList.add("focus-ok");
       erroNumero.style.display = "none";
+      
+      codigoCvc.classList.remove("borda-error");
+      codigoCvc.classList.remove("focus-error");
+      codigoCvc.classList.add("focus-ok");
+      cvcMsgErr.style.display = "none";
     }
   }
 
