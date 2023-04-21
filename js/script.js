@@ -49,7 +49,7 @@ window.onload = function() {
         campoNome.classList.add("focus-error");
         campoNome.classList.remove("focus-ok");
         erroNome.style.display = "block";
-        erroNome.innerHTML = " Digite o nome impresso no cartão, número não é permitido!";
+        erroNome.innerHTML = "Seu primeiro nome deve ter apenas letras, não números.";
       }
 
       /* Não pode conter acentos e caracteres especiais */
