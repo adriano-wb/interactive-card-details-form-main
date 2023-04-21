@@ -60,13 +60,11 @@ window.onload = function() {
          erroNome.style.display = "block";
          erroNome.textContent = " Por favor, não coloque sinais em seu nome!";
        }
-     }
- 
-     if (!campoNome.value) {
+     } else {
        campoNome.classList.remove("borda-error");
        campoNome.classList.remove("focus-error");
        campoNome.classList.add("focus-ok");
-       nomeImpresso.textContent = "JANE APLESSED";
+       nomeImpresso.textContent = "JANE APPLESSED";
        erroNome.style.display = "none";
      }
    }
@@ -91,9 +89,7 @@ window.onload = function() {
          erroNumero.style.display = "block";
          erroNumero.textContent = " Digite um número válido!";
        }
-     }
- 
-     if (!campoNumero.value) {
+     } else {
        campoNumero.classList.remove("borda-error");
        campoNumero.classList.remove("focus-error");
        campoNumero.classList.add("focus-ok");
@@ -217,7 +213,7 @@ window.onload = function() {
      if (!campoNome.value) {
        erroNome.style.display = "block";
        erroNome.textContent = " Preencha o campo requerido!";
-       nomeImpresso.textContent = "JANE APLESSED";
+       nomeImpresso.textContent = "JANE APPLESSED";
        campoNome.classList.remove("focus-ok");
        campoNome.classList.add("focus-error");
        campoNome.classList.add("borda-error");
