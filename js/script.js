@@ -209,7 +209,7 @@ window.onload = function() {
   }
 
   /* Validação de formulário para liberação da conclusão */
-  function botaoAcaoValidarFormulario() {
+  function botaoAcaoValidarFormulario(e) {
     if (!campoNome.value) {
       erroNome.style.display = "block";
       erroNome.innerHTML = " Preencha o campo requerido!";
@@ -377,6 +377,9 @@ window.onload = function() {
             formSecao.style.display = "none";
             thanksSecao.style.display = "flex";
         })
+    } else {
+      campoNome.focus();
+      e.preventDefault();
     }
   }
 
