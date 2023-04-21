@@ -68,7 +68,6 @@ window.onload = function() {
        campoNome.classList.add("focus-ok");
        nomeImpresso.textContent = "JANE APLESSED";
        erroNome.style.display = "none";
-       nomeImpresso.textContent = "";
      }
    }
  
@@ -100,7 +99,6 @@ window.onload = function() {
        campoNumero.classList.add("focus-ok");
        numeroImpresso.textContent = "0000 0000 0000 0000";
        erroNumero.style.display = "none";
-       numeroImpresso.textContent = "";
      }
  
      event.target.value = formattedInput.trim();
