@@ -358,20 +358,13 @@ window.onload = function() {
     }
 
     /* Se todos passarem no teste, avança para o agradecimento */
-    if (campoNome.value &&
-        /[a-zA-Z0-9\s]/g.test(campoNome.value) &&
-        campoNumero.value &&
-        validNumeroCartao.test(campoNumero.value) &&
-        mesValidade.value &&
-        /[0-9]/g.test(mesValidade.value) &&
-        !Number(mesValidade.value > 12) &&
-        !Number(mesValidade.value < 1) &&
-        anoValidade.value &&
-        /[0-9]/g.test(anoValidade.value) &&
-        mesValidade.value.length === 2 &&
-        anoValidade.value.length === 2 &&
-        /[0-9]/g.test(codigoCvc.value) &&
-        codigoCvc.value.length === 3) {
+    if (campoNome.value && /[a-zA-Z0-9\s]/g.test(campoNome.value) &&
+        campoNumero.value && validNumeroCartao.test(campoNumero.value) &&
+        mesValidade.value && /[0-9]/g.test(mesValidade.value) &&
+        !Number(mesValidade.value > 12) && !Number(mesValidade.value < 1) &&
+        anoValidade.value && /[0-9]/g.test(anoValidade.value) &&
+        mesValidade.value.length === 2 && anoValidade.value.length === 2 &&
+        /[0-9]/g.test(codigoCvc.value) && codigoCvc.value.length === 3) {
           formSecao.classList.add("animOpacity0");
           formSecao.addEventListener("animationend", () => {
             formSecao.style.display = "none";
@@ -379,11 +372,12 @@ window.onload = function() {
         })
     } 
     
-    if (!campoNome.value || /a-zA-Z0-9\s/g.test(campoNome.value)) {
+    if (!campoNome.value || /^a-zA-Z0-9\s/g.test(campoNome.value)) {
       campoNome.focus();
     } else if(!campoNumero.value || !validNumeroCartao.test(campoNumero.value)) {
       campoNumero.focus();
-    } else if (!mesValidade.value || /[^0-9]/g.test(mesValidade.value) || Number(mesValidade.value > 12) || Number(mesValidade.value < 1)) {
+    } else if (!mesValidade.value || /[^0-9]/g.test(mesValidade.value) || 
+      Number(mesValidade.value > 12) || Number(mesValidade.value < 1)) {
       mesValidade.focus();
     } else if (!anoValidade.value || /[^0-9]/g.test(anoValidade.value)) {
       anoValidade.focus();
@@ -459,6 +453,7 @@ window.onload = function() {
           !codigoCvc.value && /[^0-9]/g.test(codigoCvc.value)) {
         anoValidade.focus();
       }
+    }
   }
 
   function imprimirNumeroCartaoCorretamente() {
