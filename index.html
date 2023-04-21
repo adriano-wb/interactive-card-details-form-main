@@ -36,14 +36,14 @@
             <div class="card-name" aria-describedby="inptCaptionName">
               <label for="name" class="card-name__label" id="inptCaptionName">Cardholder Name</label>
               <input type="text" autocomplete="cc-name" class="card-name__field focus-ok" name="nomeCartao" id="name" maxlength="29" placeholder="e.g. Jane Appleseed" aria-required="true" required>
-              <p class="msg-erro" id="msgNome" role="alert"></p>
+              <p class="msg-erro" id="msgNome" role="alert">Seu nome deve parecer com o do cartão, não pode conter números ou caracteres especiais.</p>
             </div>
 
             <!-- Campo de entrada de número do cartão -->
             <div class="card-number" aria-describedby="inptCaptionNumber">
               <label for="number" class="card-number__label" id="inptCaptionNumber">Card Number</label>
               <input type="text" class="card-number__field focus-ok" autocomplete="cc-number" name="numeroCartao" id="number" maxlength="19" placeholder="e.g. 1234 5678 9123 0000" aria-required="true" required>
-              <p class="msg-erro" id="msgNumero" role="alert"></p>
+              <p class="msg-erro" id="msgNumero" role="alert">Descreva o número impresso no cartão</p>
             </div>
 
             <!-- Campo de entrada data de validade -->
@@ -55,14 +55,14 @@
                   <input type="text" class="mes-year-field__mes focus-ok" name="mesValidade" autocomplete="cc-exp-month" id="mes" maxlength="3" placeholder="MM" aria-required="true" required>
                   <input type="text" class="mes-year-field__year focus-ok" name="anoValidade" autocomplete="cc-exp-year" id="ano" maxlength="3" placeholder="YY" aria-required="true" required>
                 </div>
-                <p class="msg-erro" id="msgDates" role="alert"></p>
+                <p class="msg-erro" id="msgDates" role="alert">Data de validade do seu cartão</p>
               </div>
 
               <!-- Código de três digitos CVC -->
               <div class="card-cvc">
                 <label for="cvc" class="card-cvc__label">CVC</label>
                 <input type="text" name="codigoCvc" class="card-cvc__field focus-ok" id="cvc" maxlength="3" placeholder="e.g. 123" autocomplete="cc-csc" aria-required="true" required>
-                <p class="msg-erro" id="msgCvc">Teste</p>
+                <p class="msg-erro" id="msgCvc" role="alter">Seu código de três digitos no verso do cartão.</p>
               </div>
             </div>
 
