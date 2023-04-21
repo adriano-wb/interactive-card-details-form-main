@@ -210,12 +210,6 @@ window.onload = function() {
 
   /* Validação de formulário para liberação da conclusão */
   function botaoAcaoValidarFormulario() {
-    campoNome.blur();
-    campoNumero.blur();
-    mesValidade.blur();
-    anoValidade.blur();
-    codigoCvc.blur();
-    
     if (!campoNome.value) {
       erroNome.style.display = "block";
       erroNome.innerHTML = " Preencha o campo requerido!";
@@ -390,8 +384,6 @@ window.onload = function() {
     } else if (!codigoCvc.value || /[^0-9]/g.test(codigoCvc.value) || codigoCvc.value < 3) {
       codigoCvc.focus();
     } else {
-      campoNome.focus();
-        
       if ((!campoNome.value && /^a-zA-Z0-9\s/g.test(campoNome.value) && 
          campoNumero.value && validNumeroCartao.test(campoNumero.value) && 
          !mesValidade.value && /[^0-9]/g.test(mesValidade.value) &&
