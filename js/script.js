@@ -209,14 +209,14 @@ window.onload = function() {
   }
 
   /* Validação de formulário para liberação da conclusão */
-  function botaoAcaoValidarFormulario(e) {
+  function botaoAcaoValidarFormulario() {
     if (!campoNome.value) {
       erroNome.style.display = "block";
       erroNome.innerHTML = " Preencha o campo requerido!";
       campoNome.classList.remove("focus-ok");
       campoNome.classList.add("focus-error");
       campoNome.classList.add("borda-error");
-      e.preventDefault();
+      campoNome.focus();
     }
 
     if (!campoNumero.value) {
@@ -225,7 +225,7 @@ window.onload = function() {
       campoNumero.classList.remove("focus-ok");
       campoNumero.classList.add("focus-error");
       campoNumero.classList.add("borda-error");
-      e.preventDefault();
+      campoNumero.focus();
     }
 
     if (!mesValidade.value && !anoValidade.value) {
@@ -239,6 +239,8 @@ window.onload = function() {
       anoValidade.classList.remove("focus-ok");
       anoValidade.classList.add("focus-error");
       anoValidade.classList.add("borda-error");
+      
+      mesValidade.focus();
     }
 
     if (mesValidade.value && anoValidade.value) {
@@ -258,6 +260,7 @@ window.onload = function() {
       mesValidade.classList.remove("focus-ok");
       mesValidade.classList.add("focus-error");
       mesValidade.classList.add("borda-error");
+      mesValidade.focus();
 
       anoValidade.classList.add("focus-ok");
       anoValidade.classList.remove("focus-error");
@@ -270,6 +273,7 @@ window.onload = function() {
       anoValidade.classList.remove("focus-ok");
       anoValidade.classList.add("focus-error");
       anoValidade.classList.add("borda-error");
+      anoValidade.focus();
 
       mesValidade.classList.add("focus-ok");
       mesValidade.classList.remove("focus-error");
@@ -291,6 +295,7 @@ window.onload = function() {
         mesValidade.classList.remove("focus-ok");
         mesValidade.classList.add("focus-error");
         mesValidade.classList.add("borda-error");
+        mesValidade.focus();
       }
     }
 
@@ -309,6 +314,7 @@ window.onload = function() {
         anoValidade.classList.remove("focus-ok");
         anoValidade.classList.add("focus-error");
         anoValidade.classList.add("borda-error");
+        anoValidade.focus();
       }
     }
 
@@ -331,6 +337,7 @@ window.onload = function() {
       codigoCvc.classList.remove("focus-ok");
       codigoCvc.classList.add("focus-error");
       codigoCvc.classList.add("borda-error");
+      codigoCvc.focus();
     } else {
       cvcMsgErr.style.display = "none";
       codigoCvc.classList.add("focus-ok");
