@@ -210,6 +210,12 @@ window.onload = function() {
 
   /* Validação de formulário para liberação da conclusão */
   function botaoAcaoValidarFormulario() {
+    campoNome.blur();
+    campoNumero.blur();
+    mesValidade.blur();
+    anoValidade.blur();
+    codigoCvc.blur();
+    
     if (!campoNome.value) {
       erroNome.style.display = "block";
       erroNome.innerHTML = " Preencha o campo requerido!";
