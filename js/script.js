@@ -256,6 +256,7 @@ window.onload = function() {
      }
  
      if (!mesValidade.value && anoValidade.value) {
+       erroDates.style.display = "block";
        erroDates.textContent = " Preencha o campo do mês!";
        mesValidade.classList.remove("focus-ok");
        mesValidade.classList.add("focus-error");
@@ -429,7 +430,7 @@ window.onload = function() {
          campoNumero.focus();    
        }
        
-       if ((campoNome.value || /a-zA-Z0-9\s/g.test(campoNome.value) && 
+       if ((campoNome.value || /^a-zA-Z0-9\s/g.test(campoNome.value) && 
           campoNumero.value || validNumeroCartao.test(campoNumero.value) && 
           !mesValidade.value || /[^0-9]/g.test(mesValidade.value) &&
           (Number(mesValidade.value > 12) || Number(mesValidade.value < 1)) &&
