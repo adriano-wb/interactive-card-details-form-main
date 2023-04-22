@@ -356,7 +356,7 @@ window.onload = function() {
      }
  
      /* Se todos passarem no teste, avança para o agradecimento */
-     if (campoNome.value && !/[^a-zA-Z0-9\s]/g.test(campoNome.value) &&
+     if (campoNome.value && /[a-zA-Z0-9\s]/g.test(campoNome.value) &&
          campoNumero.value && validNumeroCartao.test(campoNumero.value) &&
          mesValidade.value && /[0-9]/g.test(mesValidade.value) &&
          !Number(mesValidade.value > 12) && !Number(mesValidade.value < 1) &&
