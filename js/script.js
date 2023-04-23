@@ -383,160 +383,160 @@ window.onload = function() {
      } else if (!codigoCvc.value || /[^0-9]/g.test(codigoCvc.value) || codigoCvc.value < 3) {
        codigoCvc.focus();
      } else {
-       /* Focar no campo de nome quando .... */
+      
+      /* Focar no campo de nome quando .... */
       if (
-        !((campoNome.value || /^[a-zA-Z\s]+$/.test(campoNome.value)) &&
-        (campoNumero.value || validNumeroCartao.test(campoNumero.value)) && 
-        (mesValidade.value || /[0-9]/g.test(mesValidade.value)) &&
+        !((campoNome.value && /^[a-zA-Z\s]+$/.test(campoNome.value)) &&
+        (campoNumero.value && validNumeroCartao.test(campoNumero.value)) && 
+        (mesValidade.value && /[0-9]/g.test(mesValidade.value)) &&
         (Number(mesValidade.value < 12) || Number(mesValidade.value > 1)) &&
-        (anoValidade.value || /[0-9]/g.test(anoValidade.value)) &&
-        (codigoCvc.value || /[0-9]/g.test(codigoCvc.value))) ||
+        (anoValidade.value && /[0-9]/g.test(anoValidade.value)) &&
+        (codigoCvc.value && /[0-9]/g.test(codigoCvc.value))) ||
 
-        (!(campoNome.value || /^[a-zA-Z\s]+$/.test(campoNome.value)) &&
-        (campoNumero.value || validNumeroCartao.test(campoNumero.value)) && 
-        (mesValidade.value || /[0-9]/g.test(mesValidade.value)) &&
+        (!(campoNome.value && /^[a-zA-Z\s]+$/.test(campoNome.value)) &&
+        (campoNumero.value && validNumeroCartao.test(campoNumero.value)) && 
+        (mesValidade.value && /[0-9]/g.test(mesValidade.value)) &&
         (Number(mesValidade.value < 12) || Number(mesValidade.value > 1)) &&
-        (anoValidade.value || /[0-9]/g.test(anoValidade.value)) &&
-        !(codigoCvc.value || /[0-9]/g.test(codigoCvc.value))) ||
+        (anoValidade.value && /[0-9]/g.test(anoValidade.value)) &&
+        !(codigoCvc.value && /[0-9]/g.test(codigoCvc.value))) ||
 
-        (!(campoNome.value || /^[a-zA-Z\s]+$/.test(campoNome.value)) &&
-        (campoNumero.value || validNumeroCartao.test(campoNumero.value)) && 
-        (mesValidade.value || /[0-9]/g.test(mesValidade.value)) &&
+        (!(campoNome.value && /^[a-zA-Z\s]+$/.test(campoNome.value)) &&
+        (campoNumero.value && validNumeroCartao.test(campoNumero.value)) && 
+        (mesValidade.value && /[0-9]/g.test(mesValidade.value)) &&
         (Number(mesValidade.value < 12) || Number(mesValidade.value > 1)) &&
-        !(anoValidade.value || /[0-9]/g.test(anoValidade.value)) &&
-        !(codigoCvc.value || /[0-9]/g.test(codigoCvc.value))) || 
+        !(anoValidade.value && /[0-9]/g.test(anoValidade.value)) &&
+        !(codigoCvc.value && /[0-9]/g.test(codigoCvc.value))) || 
 
-        (!(campoNome.value || /^[a-zA-Z\s]+$/.test(campoNome.value)) &&
-        (campoNumero.value || validNumeroCartao.test(campoNumero.value)) && 
-        !(mesValidade.value || /[0-9]/g.test(mesValidade.value)) &&
+        (!(campoNome.value && /^[a-zA-Z\s]+$/.test(campoNome.value)) &&
+        (campoNumero.value && validNumeroCartao.test(campoNumero.value)) && 
+        !(mesValidade.value && /[0-9]/g.test(mesValidade.value)) &&
         !(Number(mesValidade.value < 12) || Number(mesValidade.value > 1)) &&
-        !(anoValidade.value || /[0-9]/g.test(anoValidade.value)) &&
-        !(codigoCvc.value || /[0-9]/g.test(codigoCvc.value))) ||
+        !(anoValidade.value && /[0-9]/g.test(anoValidade.value)) &&
+        !(codigoCvc.value && /[0-9]/g.test(codigoCvc.value))) ||
 
-        (!(campoNome.value || /^[a-zA-Z\s]+$/.test(campoNome.value)) &&
-        !(campoNumero.value || validNumeroCartao.test(campoNumero.value)) && 
-        (mesValidade.value || /[0-9]/g.test(mesValidade.value)) &&
+        (!(campoNome.value && /^[a-zA-Z\s]+$/.test(campoNome.value)) &&
+        !(campoNumero.value && validNumeroCartao.test(campoNumero.value)) && 
+        (mesValidade.value && /[0-9]/g.test(mesValidade.value)) &&
         (Number(mesValidade.value < 12) || Number(mesValidade.value > 1)) &&
-        (anoValidade.value || /[0-9]/g.test(anoValidade.value)) &&
-        !(codigoCvc.value || /[0-9]/g.test(codigoCvc.value))) ||
+        (anoValidade.value && /[0-9]/g.test(anoValidade.value)) &&
+        !(codigoCvc.value && /[0-9]/g.test(codigoCvc.value))) ||
 
-        (!(campoNome.value || /^[a-zA-Z\s]+$/.test(campoNome.value)) &&
-        (campoNumero.value || validNumeroCartao.test(campoNumero.value)) && 
-        !(mesValidade.value || /[0-9]/g.test(mesValidade.value)) &&
+        (!(campoNome.value && /^[a-zA-Z\s]+$/.test(campoNome.value)) &&
+        (campoNumero.value && validNumeroCartao.test(campoNumero.value)) && 
+        !(mesValidade.value && /[0-9]/g.test(mesValidade.value)) &&
         !(Number(mesValidade.value < 12) || Number(mesValidade.value > 1)) &&
-        (anoValidade.value || /[0-9]/g.test(anoValidade.value)) &&
-        !(codigoCvc.value || /[0-9]/g.test(codigoCvc.value))) ||
+        (anoValidade.value && /[0-9]/g.test(anoValidade.value)) &&
+        !(codigoCvc.value && /[0-9]/g.test(codigoCvc.value))) ||
 
-        (!(campoNome.value || /^[a-zA-Z\s]+$/.test(campoNome.value)) &&
-        (campoNumero.value || validNumeroCartao.test(campoNumero.value)) && 
-        !(mesValidade.value || /[0-9]/g.test(mesValidade.value)) &&
+        (!(campoNome.value && /^[a-zA-Z\s]+$/.test(campoNome.value)) &&
+        (campoNumero.value && validNumeroCartao.test(campoNumero.value)) && 
+        !(mesValidade.value && /[0-9]/g.test(mesValidade.value)) &&
         (Number(mesValidade.value < 12) || Number(mesValidade.value > 1)) &&
-        !(anoValidade.value || /[0-9]/g.test(anoValidade.value)) &&
-        !(codigoCvc.value || /[0-9]/g.test(codigoCvc.value)))) {
+        !(anoValidade.value && /[0-9]/g.test(anoValidade.value)) &&
+        !(codigoCvc.value && /[0-9]/g.test(codigoCvc.value)))) {
           campoNome.focus();
       }
 
       /* Focar no campo de número quando... */
       if (
-        ((campoNome.value || /^[a-zA-Z\s]+$/.test(campoNome.value)) &&
-        !(campoNumero.value || validNumeroCartao.test(campoNumero.value)) && 
-        !(mesValidade.value || /[0-9]/g.test(mesValidade.value)) &&
+        ((campoNome.value && /^[a-zA-Z\s]+$/.test(campoNome.value)) &&
+        !(campoNumero.value && validNumeroCartao.test(campoNumero.value)) && 
+        !(mesValidade.value && /[0-9]/g.test(mesValidade.value)) &&
         !(Number(mesValidade.value < 12) || Number(mesValidade.value > 1)) &&
-        !(anoValidade.value || /[0-9]/g.test(anoValidade.value)) &&
-        !(codigoCvc.value || /[0-9]/g.test(codigoCvc.value))) ||
+        !(anoValidade.value && /[0-9]/g.test(anoValidade.value)) &&
+        !(codigoCvc.value && /[0-9]/g.test(codigoCvc.value))) ||
 
-        ((campoNome.value || /^[a-zA-Z\s]+$/.test(campoNome.value)) &&
-        !(campoNumero.value || validNumeroCartao.test(campoNumero.value)) && 
-        (mesValidade.value || /[0-9]/g.test(mesValidade.value)) &&
+        ((campoNome.value && /^[a-zA-Z\s]+$/.test(campoNome.value)) &&
+        !(campoNumero.value && validNumeroCartao.test(campoNumero.value)) && 
+        (mesValidade.value && /[0-9]/g.test(mesValidade.value)) &&
         (Number(mesValidade.value < 12) || Number(mesValidade.value > 1)) &&
-        (anoValidade.value || /[0-9]/g.test(anoValidade.value)) &&
-        !(codigoCvc.value || /[0-9]/g.test(codigoCvc.value))) ||
+        (anoValidade.value && /[0-9]/g.test(anoValidade.value)) &&
+        !(codigoCvc.value && /[0-9]/g.test(codigoCvc.value))) ||
 
-        ((campoNome.value || /^[a-zA-Z\s]+$/.test(campoNome.value)) &&
-        !(campoNumero.value || validNumeroCartao.test(campoNumero.value)) && 
-        (mesValidade.value || /[0-9]/g.test(mesValidade.value)) &&
+        ((campoNome.value && /^[a-zA-Z\s]+$/.test(campoNome.value)) &&
+        !(campoNumero.value && validNumeroCartao.test(campoNumero.value)) && 
+        (mesValidade.value && /[0-9]/g.test(mesValidade.value)) &&
         (Number(mesValidade.value < 12) || Number(mesValidade.value > 1)) &&
-        !(anoValidade.value || /[0-9]/g.test(anoValidade.value)) &&
-        !(codigoCvc.value || /[0-9]/g.test(codigoCvc.value))) || 
+        !(anoValidade.value && /[0-9]/g.test(anoValidade.value)) &&
+        !(codigoCvc.value && /[0-9]/g.test(codigoCvc.value))) || 
 
-        ((campoNome.value || /^[a-zA-Z\s]+$/.test(campoNome.value)) &&
-        !(campoNumero.value || validNumeroCartao.test(campoNumero.value)) && 
-        !(mesValidade.value || /[0-9]/g.test(mesValidade.value)) &&
+        ((campoNome.value && /^[a-zA-Z\s]+$/.test(campoNome.value)) &&
+        !(campoNumero.value && validNumeroCartao.test(campoNumero.value)) && 
+        !(mesValidade.value && /[0-9]/g.test(mesValidade.value)) &&
         !(Number(mesValidade.value < 12) || Number(mesValidade.value > 1)) &&
-        (anoValidade.value || /[0-9]/g.test(anoValidade.value)) &&
-        !(codigoCvc.value || /[0-9]/g.test(codigoCvc.value))) ||
+        (anoValidade.value && /[0-9]/g.test(anoValidade.value)) &&
+        !(codigoCvc.value && /[0-9]/g.test(codigoCvc.value))) ||
 
-        ((campoNome.value || /^[a-zA-Z\s]+$/.test(campoNome.value)) &&
-        !(campoNumero.value || validNumeroCartao.test(campoNumero.value)) && 
-        !(mesValidade.value || /[0-9]/g.test(mesValidade.value)) &&
+        ((campoNome.value && /^[a-zA-Z\s]+$/.test(campoNome.value)) &&
+        !(campoNumero.value && validNumeroCartao.test(campoNumero.value)) && 
+        !(mesValidade.value && /[0-9]/g.test(mesValidade.value)) &&
         !(Number(mesValidade.value < 12) || Number(mesValidade.value > 1)) &&
-        (anoValidade.value || /[0-9]/g.test(anoValidade.value)) &&
-        (codigoCvc.value || /[0-9]/g.test(codigoCvc.value)))) {
+        (anoValidade.value && /[0-9]/g.test(anoValidade.value)) &&
+        (codigoCvc.value && /[0-9]/g.test(codigoCvc.value)))) {
           campoNumero.focus();
       }
 
-
       if (
-        ((campoNome.value || /^[a-zA-Z\s]+$/.test(campoNome.value)) &&
-        (campoNumero.value || validNumeroCartao.test(campoNumero.value)) && 
-        !(mesValidade.value || /[0-9]/g.test(mesValidade.value)) &&
+        ((campoNome.value && /^[a-zA-Z\s]+$/.test(campoNome.value)) &&
+        (campoNumero.value && validNumeroCartao.test(campoNumero.value)) && 
+        !(mesValidade.value && /[0-9]/g.test(mesValidade.value)) &&
         !(Number(mesValidade.value < 12) || Number(mesValidade.value > 1)) &&
-        !(anoValidade.value || /[0-9]/g.test(anoValidade.value)) &&
-        !(codigoCvc.value || /[0-9]/g.test(codigoCvc.value))) ||
+        !(anoValidade.value && /[0-9]/g.test(anoValidade.value)) &&
+        !(codigoCvc.value && /[0-9]/g.test(codigoCvc.value))) ||
 
-        ((campoNome.value || /^[a-zA-Z\s]+$/.test(campoNome.value)) &&
-        (campoNumero.value || validNumeroCartao.test(campoNumero.value)) && 
-        !(mesValidade.value || /[0-9]/g.test(mesValidade.value)) &&
+        ((campoNome.value && /^[a-zA-Z\s]+$/.test(campoNome.value)) &&
+        (campoNumero.value && validNumeroCartao.test(campoNumero.value)) && 
+        !(mesValidade.value && /[0-9]/g.test(mesValidade.value)) &&
         !(Number(mesValidade.value < 12) || Number(mesValidade.value > 1)) &&
-        (anoValidade.value || /[0-9]/g.test(anoValidade.value)) &&
-        !(codigoCvc.value || /[0-9]/g.test(codigoCvc.value))) ||
+        (anoValidade.value && /[0-9]/g.test(anoValidade.value)) &&
+        !(codigoCvc.value && /[0-9]/g.test(codigoCvc.value))) ||
 
-        ((campoNome.value || /^[a-zA-Z\s]+$/.test(campoNome.value)) &&
-        (campoNumero.value || validNumeroCartao.test(campoNumero.value)) && 
-        !(mesValidade.value || /[0-9]/g.test(mesValidade.value)) &&
+        ((campoNome.value && /^[a-zA-Z\s]+$/.test(campoNome.value)) &&
+        (campoNumero.value && validNumeroCartao.test(campoNumero.value)) && 
+        !(mesValidade.value && /[0-9]/g.test(mesValidade.value)) &&
         !(Number(mesValidade.value < 12) || Number(mesValidade.value > 1)) &&
-        !(anoValidade.value || /[0-9]/g.test(anoValidade.value)) &&
-        (codigoCvc.value || /[0-9]/g.test(codigoCvc.value))) || 
+        !(anoValidade.value && /[0-9]/g.test(anoValidade.value)) &&
+        (codigoCvc.value && /[0-9]/g.test(codigoCvc.value))) || 
 
-        ((campoNome.value || /^[a-zA-Z\s]+$/.test(campoNome.value)) &&
-        (campoNumero.value || validNumeroCartao.test(campoNumero.value)) && 
-        !(mesValidade.value || /[0-9]/g.test(mesValidade.value)) &&
+        ((campoNome.value && /^[a-zA-Z\s]+$/.test(campoNome.value)) &&
+        (campoNumero.value && validNumeroCartao.test(campoNumero.value)) && 
+        !(mesValidade.value && /[0-9]/g.test(mesValidade.value)) &&
         !(Number(mesValidade.value < 12) || Number(mesValidade.value > 1)) &&
-        (anoValidade.value || /[0-9]/g.test(anoValidade.value)) &&
-        (codigoCvc.value || /[0-9]/g.test(codigoCvc.value)))) {
+        (anoValidade.value && /[0-9]/g.test(anoValidade.value)) &&
+        (codigoCvc.value && /[0-9]/g.test(codigoCvc.value)))) {
           mesValidade.focus();
       }
 
       if (
-        ((campoNome.value || /^[a-zA-Z\s]+$/.test(campoNome.value)) &&
-        (campoNumero.value || validNumeroCartao.test(campoNumero.value)) && 
-        (mesValidade.value || /[0-9]/g.test(mesValidade.value)) &&
+        ((campoNome.value && /^[a-zA-Z\s]+$/.test(campoNome.value)) &&
+        (campoNumero.value && validNumeroCartao.test(campoNumero.value)) && 
+        (mesValidade.value && /[0-9]/g.test(mesValidade.value)) &&
         (Number(mesValidade.value < 12) || Number(mesValidade.value > 1)) &&
-        !(anoValidade.value || /[0-9]/g.test(anoValidade.value)) &&
-        !(codigoCvc.value || /[0-9]/g.test(codigoCvc.value))) ||
+        !(anoValidade.value && /[0-9]/g.test(anoValidade.value)) &&
+        !(codigoCvc.value && /[0-9]/g.test(codigoCvc.value))) ||
 
-        ((campoNome.value || /^[a-zA-Z\s]+$/.test(campoNome.value)) &&
-        (campoNumero.value || validNumeroCartao.test(campoNumero.value)) && 
-        (mesValidade.value || /[0-9]/g.test(mesValidade.value)) &&
+        ((campoNome.value && /^[a-zA-Z\s]+$/.test(campoNome.value)) &&
+        (campoNumero.value && validNumeroCartao.test(campoNumero.value)) && 
+        (mesValidade.value && /[0-9]/g.test(mesValidade.value)) &&
         (Number(mesValidade.value < 12) || Number(mesValidade.value > 1)) &&
-        !(anoValidade.value || /[0-9]/g.test(anoValidade.value)) &&
-        (codigoCvc.value || /[0-9]/g.test(codigoCvc.value)))) {
+        !(anoValidade.value && /[0-9]/g.test(anoValidade.value)) &&
+        (codigoCvc.value && /[0-9]/g.test(codigoCvc.value)))) {
           anoValidade.focus();
       }
 
-      if (!((campoNome.value || /^[a-zA-Z\s]+$/.test(campoNome.value)) &&
-          (campoNumero.value || validNumeroCartao.test(campoNumero.value)) && 
-          (mesValidade.value || /[0-9]/g.test(mesValidade.value)) &&
+      if (!((campoNome.value && /^[a-zA-Z\s]+$/.test(campoNome.value)) &&
+          (campoNumero.value && validNumeroCartao.test(campoNumero.value)) && 
+          (mesValidade.value && /[0-9]/g.test(mesValidade.value)) &&
           (Number(mesValidade.value < 12) || Number(mesValidade.value > 1)) &&
-          (anoValidade.value || /[0-9]/g.test(anoValidade.value)) &&
-          (codigoCvc.value || /[0-9]/g.test(codigoCvc.value))) || 
+          (anoValidade.value && /[0-9]/g.test(anoValidade.value)) &&
+          (codigoCvc.value && /[0-9]/g.test(codigoCvc.value))) || 
 
-          ((campoNome.value || /^[a-zA-Z\s]+$/.test(campoNome.value)) &&
-          (campoNumero.value || validNumeroCartao.test(campoNumero.value)) && 
-          (mesValidade.value || /[0-9]/g.test(mesValidade.value)) &&
+          ((campoNome.value && /^[a-zA-Z\s]+$/.test(campoNome.value)) &&
+          (campoNumero.value && validNumeroCartao.test(campoNumero.value)) && 
+          (mesValidade.value && /[0-9]/g.test(mesValidade.value)) &&
           (Number(mesValidade.value < 12) || Number(mesValidade.value > 1)) &&
-          (anoValidade.value || /[0-9]/g.test(anoValidade.value)) &&
-          !(codigoCvc.value || /[0-9]/g.test(codigoCvc.value)))) {
+          (anoValidade.value && /[0-9]/g.test(anoValidade.value)) &&
+          !(codigoCvc.value && /[0-9]/g.test(codigoCvc.value)))) {
         codigoCvc.focus();
       }
      }
