@@ -53,7 +53,7 @@ window.onload = function() {
        }
  
        /* Não pode conter acentos e caracteres especiais */
-       if (/[^a-zA-Z0-9\s]/g.test(campoNome.value)) {
+       if (/[^a-zA-Z\s]/g.test(campoNome.value)) {
          campoNome.classList.add("borda-error");
          campoNome.classList.add("focus-error");
          campoNome.classList.remove("focus-ok");
@@ -357,7 +357,7 @@ window.onload = function() {
      }
  
      /* Se todos passarem no teste, avança para o agradecimento */
-     if (campoNome.value && /[a-zA-Z0-9\s]/g.test(campoNome.value) &&
+     if (campoNome.value && /[a-zA-Z\s]/g.test(campoNome.value) &&
          campoNumero.value && validNumeroCartao.test(campoNumero.value) &&
          mesValidade.value && /[0-9]/g.test(mesValidade.value) &&
          !Number(mesValidade.value > 12) && !Number(mesValidade.value < 1) &&
@@ -407,14 +407,14 @@ window.onload = function() {
          campoNome.focus();
        }
        
-       if ((campoNome.value || /[a-zA-Z0-9\s]/g.test(campoNome.value)) && 
+       if ((campoNome.value || /[a-zA-Z\s]/g.test(campoNome.value)) && 
           (!campoNumero.value || !validNumeroCartao.test(campoNumero.value)) && 
           (!mesValidade.value || /[^0-9]/g.test(mesValidade.value)) &&
           (Number(mesValidade.value > 12) || Number(mesValidade.value < 1)) &&
           (!anoValidade.value || /[^0-9]/g.test(anoValidade.value)) &&
           (!codigoCvc.value || /[^0-9]/g.test(codigoCvc.value)) ||
  
-          (campoNome.value || /[a-zA-Z0-9\s]/g.test(campoNome.value)) && 
+          (campoNome.value || /[a-zA-Z\s]/g.test(campoNome.value)) && 
           (!campoNumero.value || !validNumeroCartao.test(campoNumero.value)) && 
           (mesValidade.value || /[0-9]/g.test(mesValidade.value)) &&
           (Number(mesValidade.value < 12) || Number(mesValidade.value > 1)) &&
@@ -430,7 +430,7 @@ window.onload = function() {
          campoNumero.focus();    
        }
        
-       if ((campoNome.value || /[a-zA-Z0-9\s]/g.test(campoNome.value)) && 
+       if ((campoNome.value || /[a-zA-Z\s]/g.test(campoNome.value)) && 
           (campoNumero.value || validNumeroCartao.test(campoNumero.value)) && 
           (!mesValidade.value || /[^0-9]/g.test(mesValidade.value)) &&
           (Number(mesValidade.value > 12) || Number(mesValidade.value < 1)) &&
