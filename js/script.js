@@ -359,11 +359,10 @@ window.onload = function() {
      /* Se todos passarem no teste, avança para o agradecimento */
      if (campoNome.value && /[a-zA-Z\s]/g.test(campoNome.value) &&
          campoNumero.value && !validNumeroCartao.test(campoNumero.value) &&
-         mesValidade.value && /[0-9]/g.test(mesValidade.value) &&
-         !Number(mesValidade.value > 12) && !Number(mesValidade.value < 1) &&
-         anoValidade.value && /[0-9]/g.test(anoValidade.value) &&
-         mesValidade.value.length === 2 && anoValidade.value.length === 2 &&
-         /[0-9]/g.test(codigoCvc.value) && codigoCvc.value.length === 3) {
+         mesValidade.value && /[0-9]{2}/g.test(mesValidade.value) &&
+         Number(mesValidade.value < 12) && Number(mesValidade.value > 1) &&
+         anoValidade.value && /[0-9]{2}/g.test(anoValidade.value) &&
+         /[0-9]{3}/g.test(codigoCvc.value)) {
            formSecao.classList.add("animOpacity0");
            formSecao.addEventListener("animationend", () => {
              formSecao.style.display = "none";
