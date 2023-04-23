@@ -357,7 +357,7 @@ window.onload = function() {
      }
  
      /* Se todos passarem no teste, avança para o agradecimento */
-     if (campoNome.value && /^[a-zA-Z/s]+$/.test(campoNome.value) &&
+     if (campoNome.value && /^[a-zA-Z\s]+$/.test(campoNome.value) &&
         campoNumero.value && validNumeroCartao.test(campoNumero.value) &&
         mesValidade.value && /[0-9]{2}/g.test(mesValidade.value) &&
         !Number(mesValidade.value > 12) && !Number(mesValidade.value < 1) &&
@@ -371,7 +371,7 @@ window.onload = function() {
          })
      } 
      
-     if (!campoNome.value || /^[a-zA-Z/s]+$/.test(campoNome.value)) {
+     if (!campoNome.value || /^[a-zA-Z\s]+$/.test(campoNome.value)) {
        campoNome.focus();
      } else if(!campoNumero.value || !validNumeroCartao.test(campoNumero.value)) {
        campoNumero.focus();
