@@ -420,6 +420,10 @@ window.onload = function() {
            !codigoCvc.value || /[^0-9]/g.test(codigoCvc.value)) {
          anoValidade.focus();
        }
+        
+       if (!codigoCvc.value || /[^0-9]/g.test(codigoCvc.value)) {
+            codigoCvc.focus();
+       }
      }
    }
  
