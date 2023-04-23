@@ -124,8 +124,14 @@ input[class*="field"] {
 
 /* Rodapé */
 .attribution {
+  font-size: 0.8rem;
+  padding: 5px;
   position: absolute;
   bottom: 2px;
   width: 100%;
   text-align: center;
+}
+
+.attribution a {
+  color: purple;
 }
