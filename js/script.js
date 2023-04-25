@@ -360,44 +360,44 @@ window.onload = function() {
      if (
        (!(campoNome.value && /^[a-zA-Z\s]+$/.test(campoNome.value)) &&
        (campoNumero.value && validNumeroCartao.test(campoNumero.value)) &&
-       (mesValidade.value && /[0-9]{2}/g.test(mesValidade.value) &&
+       (mesValidade.value && /[0-9]/g.test(mesValidade.value) &&
        Number(mesValidade.value < 12) && Number(mesValidade.value > 1)) &&
-       (anoValidade.value && /[0-9]{2}/g.test(anoValidade.value)) &&
+       (anoValidade.value && /[0-9]/g.test(anoValidade.value)) &&
        (/[0-9]{3}/g.test(codigoCvc.value) && codigoCvc.value.length === 3)) ||
 
        !((campoNome.value && /^[a-zA-Z\s]+$/.test(campoNome.value)) &&
        (campoNumero.value && validNumeroCartao.test(campoNumero.value)) &&
-       (mesValidade.value && /[0-9]{2}/g.test(mesValidade.value) &&
+       (mesValidade.value && /[0-9]/g.test(mesValidade.value) &&
        Number(mesValidade.value < 12) && Number(mesValidade.value > 1)) &&
-       (anoValidade.value && /[0-9]{2}/g.test(anoValidade.value)) &&
+       (anoValidade.value && /[0-9]/g.test(anoValidade.value)) &&
        (/[0-9]{3}/g.test(codigoCvc.value) && codigoCvc.value.length === 3)) ||
 
        (!(campoNome.value && /^[a-zA-Z\s]+$/.test(campoNome.value)) &&
        !(campoNumero.value && validNumeroCartao.test(campoNumero.value)) &&
-       !(mesValidade.value && /[0-9]{2}/g.test(mesValidade.value) &&
+       !(mesValidade.value && /[0-9]/g.test(mesValidade.value) &&
        Number(mesValidade.value < 12) && Number(mesValidade.value > 1)) &&
-       (anoValidade.value && /[0-9]{2}/g.test(anoValidade.value)) &&
+       (anoValidade.value && /[0-9]/g.test(anoValidade.value)) &&
        !(/[0-9]{3}/g.test(codigoCvc.value) && codigoCvc.value.length === 3)) ||
 
        (!(campoNome.value && /^[a-zA-Z\s]+$/.test(campoNome.value)) &&
        (campoNumero.value && validNumeroCartao.test(campoNumero.value)) &&
-       !(mesValidade.value && /[0-9]{2}/g.test(mesValidade.value) &&
+       !(mesValidade.value && /[0-9]/g.test(mesValidade.value) &&
        Number(mesValidade.value < 12) && Number(mesValidade.value > 1)) &&
-       !(anoValidade.value && /[0-9]{2}/g.test(anoValidade.value)) &&
+       !(anoValidade.value && /[0-9]/g.test(anoValidade.value)) &&
        !(/[0-9]{3}/g.test(codigoCvc.value) && codigoCvc.value.length === 3)) ||
 
        (!(campoNome.value && /^[a-zA-Z\s]+$/.test(campoNome.value)) &&
        !(campoNumero.value && validNumeroCartao.test(campoNumero.value)) &&
-       (mesValidade.value && /[0-9]{2}/g.test(mesValidade.value) &&
+       (mesValidade.value && /[0-9]/g.test(mesValidade.value) &&
        Number(mesValidade.value < 12) && Number(mesValidade.value > 1)) &&
-       !(anoValidade.value && /[0-9]{2}/g.test(anoValidade.value)) &&
+       !(anoValidade.value && /[0-9]/g.test(anoValidade.value)) &&
        (/[0-9]{3}/g.test(codigoCvc.value) && codigoCvc.value.length === 3)) ||
 
        (!(campoNome.value && /^[a-zA-Z\s]+$/.test(campoNome.value)) &&
        !(campoNumero.value && validNumeroCartao.test(campoNumero.value)) &&
-       (mesValidade.value && /[0-9]{2}/g.test(mesValidade.value) &&
+       (mesValidade.value && /[0-9]/g.test(mesValidade.value) &&
        Number(mesValidade.value < 12) && Number(mesValidade.value > 1)) &&
-       (anoValidade.value && /[0-9]{2}/g.test(anoValidade.value)) &&
+       (anoValidade.value && /[0-9]/g.test(anoValidade.value)) &&
        !(/[0-9]{3}/g.test(codigoCvc.value) && codigoCvc.value.length === 3))
      ) {
        campoNome.focus();
@@ -406,33 +406,33 @@ window.onload = function() {
      if (
        ((campoNome.value && /^[a-zA-Z\s]+$/.test(campoNome.value)) &&
        !(campoNumero.value && validNumeroCartao.test(campoNumero.value)) &&
-       (mesValidade.value && /[0-9]{2}/g.test(mesValidade.value) &&
+       (mesValidade.value && /[0-9]/g.test(mesValidade.value) &&
        Number(mesValidade.value < 12) && Number(mesValidade.value > 1)) &&
-       (anoValidade.value && /[0-9]{2}/g.test(anoValidade.value)) &&
+       (anoValidade.value && /[0-9]/g.test(anoValidade.value)) &&
        (/[0-9]{3}/g.test(codigoCvc.value) && codigoCvc.value.length === 3)) ||
        ((campoNome.value && /^[a-zA-Z\s]+$/.test(campoNome.value)) &&
        !(campoNumero.value && validNumeroCartao.test(campoNumero.value)) &&
-       !(mesValidade.value && /[0-9]{2}/g.test(mesValidade.value) &&
+       !(mesValidade.value && /[0-9]/g.test(mesValidade.value) &&
        Number(mesValidade.value < 12) && Number(mesValidade.value > 1)) &&
-       !(anoValidade.value && /[0-9]{2}/g.test(anoValidade.value)) &&
+       !(anoValidade.value && /[0-9]/g.test(anoValidade.value)) &&
        !(/[0-9]{3}/g.test(codigoCvc.value) && codigoCvc.value.length === 3)) ||
        ((campoNome.value && /^[a-zA-Z\s]+$/.test(campoNome.value)) &&
        !(campoNumero.value && validNumeroCartao.test(campoNumero.value)) &&
-       (mesValidade.value && /[0-9]{2}/g.test(mesValidade.value) &&
+       (mesValidade.value && /[0-9]/g.test(mesValidade.value) &&
        Number(mesValidade.value < 12) && Number(mesValidade.value > 1)) &&
-       !(anoValidade.value && /[0-9]{2}/g.test(anoValidade.value)) &&
+       !(anoValidade.value && /[0-9]/g.test(anoValidade.value)) &&
        !(/[0-9]{3}/g.test(codigoCvc.value) && codigoCvc.value.length === 3)) ||
        ((campoNome.value && /^[a-zA-Z\s]+$/.test(campoNome.value)) &&
        !(campoNumero.value && validNumeroCartao.test(campoNumero.value)) &&
-       (mesValidade.value && /[0-9]{2}/g.test(mesValidade.value) &&
+       (mesValidade.value && /[0-9]/g.test(mesValidade.value) &&
        Number(mesValidade.value < 12) && Number(mesValidade.value > 1)) &&
-       (anoValidade.value && /[0-9]{2}/g.test(anoValidade.value)) &&
+       (anoValidade.value && /[0-9]/g.test(anoValidade.value)) &&
        !(/[0-9]{3}/g.test(codigoCvc.value) && codigoCvc.value.length === 3)) ||
        ((campoNome.value && /^[a-zA-Z\s]+$/.test(campoNome.value)) &&
        !(campoNumero.value && validNumeroCartao.test(campoNumero.value)) &&
-       (mesValidade.value && /[0-9]{2}/g.test(mesValidade.value) &&
+       (mesValidade.value && /[0-9]/g.test(mesValidade.value) &&
        Number(mesValidade.value < 12) && Number(mesValidade.value > 1)) &&
-       !(anoValidade.value && /[0-9]{2}/g.test(anoValidade.value)) &&
+       !(anoValidade.value && /[0-9]/g.test(anoValidade.value)) &&
        (/[0-9]{3}/g.test(codigoCvc.value) && codigoCvc.value.length === 3))
      ) {
        campoNumero.focus();
@@ -441,27 +441,27 @@ window.onload = function() {
      if (
        ((campoNome.value && /^[a-zA-Z\s]+$/.test(campoNome.value)) &&
        (campoNumero.value && validNumeroCartao.test(campoNumero.value)) &&
-       !(mesValidade.value && /[0-9]{2}/g.test(mesValidade.value) &&
+       !(mesValidade.value && /[0-9]/g.test(mesValidade.value) &&
        Number(mesValidade.value < 12) && Number(mesValidade.value > 1)) &&
-       (anoValidade.value && /[0-9]{2}/g.test(anoValidade.value)) &&
+       (anoValidade.value && /[0-9]/g.test(anoValidade.value)) &&
        (/[0-9]{3}/g.test(codigoCvc.value) && codigoCvc.value.length === 3)) ||
        ((campoNome.value && /^[a-zA-Z\s]+$/.test(campoNome.value)) &&
        (campoNumero.value && validNumeroCartao.test(campoNumero.value)) &&
-       !(mesValidade.value && /[0-9]{2}/g.test(mesValidade.value) &&
+       !(mesValidade.value && /[0-9]/g.test(mesValidade.value) &&
        Number(mesValidade.value < 12) && Number(mesValidade.value > 1)) &&
-       !(anoValidade.value && /[0-9]{2}/g.test(anoValidade.value)) &&
+       !(anoValidade.value && /[0-9]/g.test(anoValidade.value)) &&
        !(/[0-9]{3}/g.test(codigoCvc.value) && codigoCvc.value.length === 3)) ||
        ((campoNome.value && /^[a-zA-Z\s]+$/.test(campoNome.value)) &&
        (campoNumero.value && validNumeroCartao.test(campoNumero.value)) &&
-       !(mesValidade.value && /[0-9]{2}/g.test(mesValidade.value) &&
+       !(mesValidade.value && /[0-9]/g.test(mesValidade.value) &&
        Number(mesValidade.value < 12) && Number(mesValidade.value > 1)) &&
-       !(anoValidade.value && /[0-9]{2}/g.test(anoValidade.value)) &&
+       !(anoValidade.value && /[0-9]/g.test(anoValidade.value)) &&
        (/[0-9]{3}/g.test(codigoCvc.value) && codigoCvc.value.length === 3)) ||
        ((campoNome.value && /^[a-zA-Z\s]+$/.test(campoNome.value)) &&
        (campoNumero.value && validNumeroCartao.test(campoNumero.value)) &&
-       !(mesValidade.value && /[0-9]{2}/g.test(mesValidade.value) &&
+       !(mesValidade.value && /[0-9]/g.test(mesValidade.value) &&
        Number(mesValidade.value < 12) && Number(mesValidade.value > 1)) &&
-       (anoValidade.value && /[0-9]{2}/g.test(anoValidade.value)) &&
+       (anoValidade.value && /[0-9]/g.test(anoValidade.value)) &&
        !(/[0-9]{3}/g.test(codigoCvc.value) && codigoCvc.value.length === 3))
      ) {
        mesValidade.focus();
@@ -470,15 +470,15 @@ window.onload = function() {
      if (
        ((campoNome.value && /^[a-zA-Z\s]+$/.test(campoNome.value)) &&
        (campoNumero.value && validNumeroCartao.test(campoNumero.value)) &&
-       (mesValidade.value && /[0-9]{2}/g.test(mesValidade.value) &&
+       (mesValidade.value && /[0-9]/g.test(mesValidade.value) &&
        Number(mesValidade.value < 12) && Number(mesValidade.value > 1)) &&
-       !(anoValidade.value && /[0-9]{2}/g.test(anoValidade.value)) &&
+       !(anoValidade.value && /[0-9]/g.test(anoValidade.value)) &&
        (/[0-9]{3}/g.test(codigoCvc.value) && codigoCvc.value.length === 3)) ||
        ((campoNome.value && /^[a-zA-Z\s]+$/.test(campoNome.value)) &&
        (campoNumero.value && validNumeroCartao.test(campoNumero.value)) &&
-       (mesValidade.value && /[0-9]{2}/g.test(mesValidade.value) &&
+       (mesValidade.value && /[0-9]/g.test(mesValidade.value) &&
        Number(mesValidade.value < 12) && Number(mesValidade.value > 1)) &&
-       !(anoValidade.value && /[0-9]{2}/g.test(anoValidade.value)) &&
+       !(anoValidade.value && /[0-9]/g.test(anoValidade.value)) &&
        !(/[0-9]{3}/g.test(codigoCvc.value) && codigoCvc.value.length === 3))
      ) {
        anoValidade.focus();
@@ -487,9 +487,9 @@ window.onload = function() {
      if (
        ((campoNome.value && /^[a-zA-Z\s]+$/.test(campoNome.value)) &&
        (campoNumero.value && validNumeroCartao.test(campoNumero.value)) &&
-       (mesValidade.value && /[0-9]{2}/g.test(mesValidade.value) &&
+       (mesValidade.value && /[0-9]/g.test(mesValidade.value) &&
        Number(mesValidade.value < 12) && Number(mesValidade.value > 1)) &&
-       (anoValidade.value && /[0-9]{2}/g.test(anoValidade.value)) &&
+       (anoValidade.value && /[0-9]/g.test(anoValidade.value)) &&
        !(/[0-9]{3}/g.test(codigoCvc.value) && codigoCvc.value.length === 3))
      ) {
        codigoCvc.focus();
