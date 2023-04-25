@@ -1,320 +1,130 @@
-main {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-}
-
-hr {
-	margin: 22px 0;
-}
-
-.mobile-none {
-	display:block;
+body {
+  /* background: url("../design/active-states.jpg") 0 0 / 100% auto no-repeat; */
 }
 
 .container {
-	background-color: var(--white);
-	/* background: url("../active-states-step-2.jpg") 0 0 / auto no-repeat; */
-	border-radius: 14px;
-	box-shadow: 1px 1px 13px #CCC5, 1px 1px 13px #CCC5;
-	display: flex;
-	height: 602px;
-	padding: 17px;
-	width: 942px;
-}
-
-.container__etapas {
-	background: url(../img/bg-sidebar-desktop.svg) 0 0 / cover no-repeat;
-	display: flex;
-	flex-flow: column wrap;
-  justify-content: flex-start;
-	flex-basis: 31%;
-	height: auto;
-	gap: 28px;
-	border-radius: 10px;
-	padding: 41px 33px;
-}
-
-.etapas-item {
-	display: flex;
-	align-items: center;
-	text-align: left;
-	margin: 0;
-}
-
-.etapas-item:nth-child(2) {
-	padding-top: 2px;
-}
-
-.etapas-item:nth-child(3) {
-	padding-top: 3px;
-}
-
-.etapas-item:nth-child(4) {
-	padding-top: 3px;
-}
-
-.etapas-item__number {
-	margin: 0;
-}
-
-.etapas-titulo {
-	display: flex;
-	flex-direction: column;
-	gap: 3px;
-	justify-content: space-between;
-	margin-left: 17.2px;
-}
-
-.etapas-titulo__local {
-	color: var(--cool-gray);
-	text-transform: uppercase;
-	font-size: 0.79rem;
-}
-
-.etapas-titulo__text {
-	color: var(--white);
-	text-transform: uppercase;
-	font-weight: 500;
-	letter-spacing: 1px;
-	font-size: 0.91rem;
-	vertical-align: middle;
-}
-
-.content-center div {
-	display: flex;
-	flex-direction: column;
-	padding: 0;
-	padding-top: 120px;
-}
-
-.container__info {
-	margin: 0;
-  box-shadow: none;
-	padding: 41px 81px 13px 94px;
-	flex-basis: 69%;
-	position: relative;
-}
-
-.info-head {
-	margin-bottom: 36px;
-}
-
-.info-head__title {
-	font-size: 2rem;
-}
-
-.info-head__text {
-	margin-top: 16px;
-  line-height: 0;
-}
-
-.info-form {
-	margin-top: 40px;
-}
-
-.form-item {
-	display: flex;
-	margin: 0;
-	margin-bottom: 19px;
-	gap: 6px;
-}
-
-.form-item:nth-child(2) .form-item__label,
-.form-item:nth-child(3) .form-item__label {
-	margin-top: 3px;
-}
-
-.form-item__label {
-	font-size: 0.90rem;
-	margin: 0;
-}
-
-.form-item__text-help {
-	font-size: 0.85rem;
-}
-
-.form-item__input {
-	border-radius: 7px;
-	padding: 13px 13px;
-	font-size: 0.88rem;
-}
-
-.form-item__input::placeholder {
-	color: var(--cool-gray);
-	letter-spacing: 0.025rem;
-	font-family: 'Ubuntu', sans-serif;
-	font-size: 0.88rem;
-}
-
-.c-btn {
-	background: transparent;
-  box-shadow: none;
-	position: absolute;
-	bottom: 0;
-	left: 0;
-  width: 100%;
-	padding: 0;
-  background-color: var(--white);
   display: flex;
+}
+
+/* Modelo do cartão de crédito frente e verso */
+.model-card {
+  background: url("../images/bg-main-desktop.png") 0 0 / 100% 100% no-repeat;
+  height: 100vh;
+  flex-basis: 36.4%;
+  justify-content: center;
+}
+
+.front-model-card, .back-model-card {
+  height: 246px;
+  width: 447px;
+}
+
+/* Frente do cartão */
+.front-model-card {
+  box-shadow: 17px 28px 22px #6663;
+  right: -127px;
+  /* top: 187px; */
+  top: 21%;
+  padding: 26px 32px;
+  align-self: flex-end;
+}
+
+.front-model-card__icon {
+  width: 85px;
+  height: 47px;
+}
+
+.front-model-card__number {
+  font-size: 1.7rem;
+}
+
+.card-name-date {
+  margin-top: 24px;
+}
+
+.card-name-date__name,
+.card-name-date__validate {
+  font-size: 1rem;
+  letter-spacing: 1px;
+}
+
+.card-name-date__name {
+  width: 290px;
+  overflow: hidden;
+}
+/* Fim frente do cartão */
+
+/* Verso do cartão */
+.back-model-card  {
+  box-shadow: 0 35px 31px #6663;
+  order: 1;
+  /* top: 470px; */
+  top: 50%;
+  right: -221px;
+}
+
+.back-model-card__cvc {
+  margin-right: 60px;
+  margin-top: 10px;
+  font-size: 0.83rem;
+}
+/* Fim verso do cartão */
+
+/* Estilo formulário para cadastro do cartão de crédito */
+.card-form {
+  flex-basis: 72%;
+  display: flex; /* display: none; */
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
+  height: 100vh;
+  margin-top: -40px;
 }
 
-.c-btn__botao-prev,
-.c-btn__botao-next {
-  cursor: pointer;
+.form-container {
+  width: 379px;
+  margin-left: 122px;
+  margin-top: 63px;
 }
 
-.c-btn__botao-prev {
-	margin-left: 90px;
-	margin-bottom: 30px;
-	transform: scaleX(0.95);
-  font-size: 1rem;
-	transition: 0.2s;
-}
-
-.c-btn__botao-prev:hover {
-	color: var(--marine-blue);
-}
-
-.c-btn__botao-next {
-	background-color: var(--marine-blue);
-	border-radius: 9px;
-	font-size: 0.97rem;
-	letter-spacing: 0.03rem;
-	margin: 0;
-	margin-bottom: 14px;
-	margin-right: 82px;
-	padding: 16px 26px;
-	transition: 0.2s;
-	width: 125px;
-}
-
-.c-btn__botao-next:hover {
-	background-color: #174a8b;
-}
-
-.c-btn__botao-next:active {
-	background-color: var(--purplish-blue);
-	opacity: 0.7;
-}
-
-.c-btn__botao-next--fix {
-	margin-left: auto;
-}
-
-.c-ofertas {
-	flex-direction: row;
-	gap: 17px;
-}
-
-.c-ofertas-item {
-	cursor: pointer;
-	flex-direction: column;
-	margin: 0;
-	justify-content: space-between;
-	padding: 18px 13px;
-	flex: 1;
-	transition: 0.2s;
-}
-
-.c-ofertas-item:nth-child(2) {
-	margin-top: 0;
-}
-
-.c-ofertas-item:nth-child(3) {
-	margin-top: 0;
-}
-
-.c-ofertas-item-preco__title {
-	padding-bottom: 0;
-}
-
-.month-or-yrs {
-	margin-right: 18px;
-}
-
-.month-of-yrs__text {
-	font-weight: none;
-  font-size: 1rem;
-}
-
-.c-add-on-item {
-	padding: 35px 0;
-}
-
-.c-add-on-item-check {
-	flex-basis: 9%;
-	margin-left: 18px;
-}
-
-.c-add-on-item-check__input[type="checkbox"]:checked + .c-add-on-item-check__label::before {
-	font-size: 10px;
-	padding-top: 1px;
-}
-
-.c-add-on-item-check__input[type="checkbox"] + .c-add-on-item-check__label::before {
-	border-radius: 4px;
-	width: 15px;
-	height: 16px;
-}
-
-.c-add-on-caption {
-	flex-basis: 80%;
-}
-
-.c-add-on-caption__title {
-	margin-bottom: 5px;
-  font-size: 0.95rem;
-}
-
-.c-add-on-price {
-  margin: 0 18px;
-}
-
-.plan-data-head__title {
-	font-size: 0.99rem;
-	margin-bottom: 3px;
-  letter-spacing: -0.02rem;
-}
-
-.plan-data-head__change {
-  font-size: 0.90rem;
-}
-
-.plan-data-head__change:hover {
-	color: var(--purplish-blue);
-}
-
-.plan-confirm-head__title {
-	letter-spacing: -0.02rem;
-	margin-bottom: 14px;
-}
-
-.plan-confirm-subtotal__price {
-	font-size: 0.85rem;
-}
-
-.total-price__value {
+input[class*="field"] {
   font-size: 1.2rem;
+  padding: 10px 15px;
 }
 
-.plan-confirm-total-head__title {
-	font-size: 0.95rem;
-		letter-spacing: -0.02rem;
+.card-number, .ends-fields {
+  margin-top: 20px;
 }
 
-.c-info-logo__img {
-  width: 74px;
-  height: 74px;
+.card-form__button {
+  cursor: pointer;
+  margin-top: 40px;
 }
 
-.c-info__title {
-	font-size: 1.9rem;
+.thank {
+  flex-basis: 72%;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin-top: -40px;
 }
 
-.d-flex-desktop {
-	display: flex;
-	align-items: center;
+.thank-container {
+  width: 379px;
+  display: flex;
+  flex-direction: column;
+  margin-left: 122px;
+  margin-top: 63px;
+}
+
+.thank__icon {
+  order: -1;
+}
+
+/* Rodapé */
+.attribution {
+  position: absolute;
+  bottom: 2px;
+  width: 100%;
+  text-align: center;
 }
